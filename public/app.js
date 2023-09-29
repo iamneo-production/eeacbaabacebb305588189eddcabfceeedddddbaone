@@ -6,13 +6,14 @@ function calculate()
 
     var BMI = weight_in_kg / (height_in_m*height_in_m)
 
-    document.getElementById("result").innerHTML += BMI;
+    document.getElementById("result").innerHTML = BMI.toFixed(2);
    
     if(BMI>= 18.5 && BMI <=24.9)
     {
       
       document.getElementById("weightStatus").innerText = " Healthy Weight"
-      document.getElementsByName("bgcolor").style.color = "green";
+      document.getElementsByName("bgcolor").style.color[0] = "green";
+      document.getElementsByName("bgcolor").style.color[1] = "green";
     }
     else
     {
