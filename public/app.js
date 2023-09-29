@@ -6,29 +6,31 @@ function calculate()
 
     var BMI = weight_in_kg / (height_in_m*height_in_m)
 
-    document.getElementById("result").innerHTML = BMI.toFixed(2);
+    document.getElementById("result").innerHTML = "BMI: "+ BMI.toFixed(2);
    
     if(BMI>= 18.5 && BMI <=24.9)
     {
       
-      document.getElementById("weightStatus").innerText = " Healthy Weight"
-      document.getElementsByName("bgcolor").style.color[0] = "green";
-      document.getElementsByName("bgcolor").style.color[1] = "green";
+      document.getElementById("weightStatus").innerText = "Weight Status: "+" Healthy Weight"
+      document.getElementById("result").style.color = "green";
+      document.getElementById("weightStatus").style.color = "green";
     }
     else
     {
       
 
       if(BMI<18.5){
-        document.getElementById("weightStatus").innerText = " Underweight"
+        document.getElementById("weightStatus").innerText ="Weight Status: "+ " Underweight"
       }
       if(BMI>=25.0 && BMI<=29.9){
-        document.getElementById("weightStatus").innerText = " Overweight"
+        document.getElementById("weightStatus").innerText = "Weight Status: "+" Overweight"
       }
       if(BMI>=30.0){
-        document.getElementById("weightStatus").innerText = " Obesity"
+        document.getElementById("weightStatus").innerText = "Weight Status: "+" Obesity"
       }
 
-      document.getElementById("bgcolor").style.color = "red";
+     
+      document.getElementById("result").style.color = "red";
+      document.getElementById("weightStatus").style.color = "red";
     }
 }
